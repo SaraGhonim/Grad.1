@@ -23,17 +23,17 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import SwipeUpDown from'react-native-swipe-up-down-fix';
+import SwipeUpDown from'react-native-swipe-up-down';
 
 class App extends  Component{
   render(){
   return (
     <>
       
-        <View style={{flex:1,backgroundColor: "#109D9B"}}>
+        <View style={{flex:1,backgroundColor: "#430D0B"}}>
           <Text>Welcome Sara</Text>
           <SwipeUpDown
-            style={{backgroundColor:'green'}}
+            style={{backgroundColor:'black'}}
 
           />
 

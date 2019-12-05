@@ -6817,6 +6817,11 @@ react-native-swipe-up-down-fix@^1.0.8:
   resolved "https://registry.yarnpkg.com/react-native-swipe-up-down-fix/-/react-native-swipe-up-down-fix-1.0.8.tgz#ddac61f8a5c49c9eb11da53823a2949bc328ec9b"
   integrity sha512-ppnXMOnAHTj4+zg60AEyI+nJ+ZyedwhA9Em+coM9YRTJA+wOdRS5DzhZuPM3lkrXRU6PAPZOS4StQ1gskW+kOw==
 
+react-native-swipe-up-down@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-native-swipe-up-down/-/react-native-swipe-up-down-1.0.7.tgz#083714875b5db1c81d589a09eb8c32a9ffae30a4"
+  integrity sha512-8j3mo+ukZBLRfQNz5N/TXLG7hTKTT8fg/2HkWWJ9umRzPz2kDthxzIkntp9QRPVh7h/sRymkhZdtLY3axdO2Zw==
+
 react-native@0.61.5:
   version "0.61.5"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.61.5.tgz#6e21acb56cbd75a3baeb1f70201a66f42600bba8"
