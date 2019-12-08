@@ -58,7 +58,7 @@ class Swipe2 extends  Component{
     <>
       
         <View style={{flex:1,backgroundColor: "#ffd420"}}>
-        <View style={{ alignItems: 'center', height: 50, marginBottom: 50,width:330}}>
+        <View style={{ alignItems: 'center', height: 50, marginBottom: 0,width:330}}>
 
           <Image source={icon2}
           style={{ width: 180,
@@ -72,30 +72,26 @@ class Swipe2 extends  Component{
             itemMini={
               <View style={{ alignItems: 'center' }}>
 
-                <View style = {styles.buttonContainer}>
+             <View style = {styles.buttonContainer1}>
                 
 
-               <TextInput style = {styles.input1}
-               placeholderTextColor = "#9a73ef"
-               placeholder="SignUp"
-               name ='SignUp'/>
+                <TextInput style={ styles.input} keyboardType="email-address"
+                 autoCorrect={false} maxLength={30} multiline={false}
+                  placeholder="Moblie Number"
+                  underlineColorAndroid = "#ffd420"
+                  />
+                </View>
+                <View style = {styles.buttonContainer1}>
+
+                <TextInput style = {styles.input}
+               underlineColorAndroid = '#ffd420'
+              //  placeholderTextColor = "#9a73ef"
+                placeholder="PassWord"
+                name ='Password'/>
+
                 </View>
 
-                <View style={styles.group}>
-                <Text > MopileNumber</Text>
-                <TextInput  keyboardType='numeric'
-                 />
-               </View>
-
-
-                <View style = {styles.buttonContainer}>
-                <TextInput style = {styles.input1}
-                placeholderTextColor = "#f002f9"
-                placeholder="signUppppp"
-                name ='SignUpppppp'/>
-                </View> 
-
-                <View style = {styles.buttonContainer1}>
+                <View style = {styles.buttonContainer2}>
               <TouchableOpacity style={styles.button2} onPress={this._signInAsync}>
                 
                 <Text style={styles.input2}> Sign in</Text>
@@ -150,20 +146,35 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
-  
+  buttonContainer:{ 
+    flex:1
+  },
+input: {
+      margin: 15,
+      height: 40,
+      width:260,
+      borderColor: '#ffffff',},
+
   buttonContainer1:{
-    backgroundColor:'#f1f2f6',
     borderTopLeftRadius: 10, borderTopRightRadius: 10,
     borderBottomLeftRadius:10,borderBottomRightRadius:10,
     height: 35,
-  width:250},
+  width:250, margin:15},
+  buttonContainer2:{
+    backgroundColor:'#f1f2f6',
 
+    borderTopLeftRadius: 10, borderTopRightRadius: 10,
+    borderBottomLeftRadius:10,borderBottomRightRadius:10,
+    height: 35,
+  width:250,
+  margin:15,
+},
  input1: {
         margin: 15,
         height: 40,
         width:300,
-        borderColor: '#7a4204',
-        borderWidth: 2,
+        borderColor: '#ffffff',
+        borderWidth: 0,
 
 },
 group: {
@@ -174,7 +185,7 @@ input: {
   padding: 5,
   flex: 1,
   height: 5,
-  borderWidth: 2,
+  borderWidth: 0,
   borderColor: '#7a4204',
 
 },

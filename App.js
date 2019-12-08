@@ -82,7 +82,7 @@ class App extends  Component{
     
        <View style={{flex:1}}>
           {         
-           (ispressed1==true&&ispressed2==false)?
+         (ispressed1==true&&ispressed2==false)?
          <First changeState={this.changeState}/>
         :
         (ispressed2==true&&ispressed1==false)?

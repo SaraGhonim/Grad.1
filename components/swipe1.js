@@ -62,7 +62,7 @@ class Swipe1 extends  Component{
 
           <Image source={icon2}
           style={{ width: 190,
-            height: 150,
+            height: 350,
             resizeMode: 'contain'}} /> 
 
           </View>
@@ -75,22 +75,31 @@ class Swipe1 extends  Component{
                 <View style = {styles.buttonContainer}>
                 
 
-               <TextInput style = {styles.input}
-               underlineColorAndroid = "transparent"
-               placeholderTextColor = "#9a73ef"
-               placeholder="UserName"
-               name ='UserName'/>
+                <TextInput style={ styles.input} keyboardType="email-address"
+                 autoCorrect={false} maxLength={30} multiline={false}
+                  placeholder="Email"
+                  underlineColorAndroid = "#ffd420"
+                  />
                 </View>
 
-                <View style = {styles.buttonContainer}>
                 <TextInput style = {styles.input}
-               underlineColorAndroid = "transparent"
-               placeholderTextColor = "#9a73ef"
+               underlineColorAndroid = '#ffd420'
+              //  placeholderTextColor = "#9a73ef"
                 placeholder="PassWord"
                 name ='Password'/>
-                </View>
 
-               
+                <View style = {styles.buttonContainer2}>
+                <TouchableOpacity style={styles.button} onPress={this._signInAsync}>
+                
+                  <Text style={styles.input2}> Create account</Text>
+                 
+                </TouchableOpacity>
+
+              </View>
+
+
+              <Text style={styles.input2}> Need Support?</Text>
+
                 </View>
             }
                           
@@ -140,13 +149,25 @@ const styles = StyleSheet.create({
   buttonContainer:{ 
       borderTopLeftRadius: 90, borderTopRightRadius: 90,
       borderBottomEndRadius:50,borderBottomRightRadius:100,},
-      input: {
+ input: {
         margin: 15,
         height: 40,
-            borderColor: '#7a42f4',
-            borderWidth: 2,
+        width:260,
+        borderColor: '#ffffff',
 
-}
+},
+buttonContainer2:{
+  backgroundColor:'#242a37',
+  borderTopLeftRadius: 10, borderTopRightRadius: 10,
+  borderBottomLeftRadius:10,borderBottomRightRadius:10,
+  height: 35,
+width:250,
+margin:15},
+input2:{ height: 40,
+         borderColor: '#7a42f4',
+         textAlign: 'center',
+         color: 'white',
+         paddingTop:5}
 });
 
 export default Swipe1;
