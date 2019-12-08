@@ -58,11 +58,11 @@ class Swipe2 extends  Component{
     <>
       
         <View style={{flex:1,backgroundColor: "#ffd420"}}>
-        <View style={{ alignItems: 'center', height: 50, marginBottom: 100,width:330}}>
+        <View style={{ alignItems: 'center', height: 50, marginBottom: 50,width:330}}>
 
           <Image source={icon2}
           style={{ width: 180,
-            height: 100,
+            height: 350,
             resizeMode: 'contain'}} /> 
 
           </View>
@@ -75,23 +75,34 @@ class Swipe2 extends  Component{
                 <View style = {styles.buttonContainer}>
                 
 
-               <TextInput style = {styles.input}
+               <TextInput style = {styles.input1}
                placeholderTextColor = "#9a73ef"
                placeholder="SignUp"
                name ='SignUp'/>
                 </View>
+
                 <View style={styles.group}>
-                <Text style={styles.title}>Weight (KG)</Text>
-                <TextInput style={styles.input} keyboardType='numeric'
-                 value={this.state.weight} onChangeText={(weight) => this.setState({weight})}/>
+                <Text > MopileNumber</Text>
+                <TextInput  keyboardType='numeric'
+                 />
                </View>
+
+
                 <View style = {styles.buttonContainer}>
-                <TextInput style = {styles.input}
-                placeholderTextColor = "#9a73ef"
+                <TextInput style = {styles.input1}
+                placeholderTextColor = "#f002f9"
                 placeholder="signUppppp"
                 name ='SignUpppppp'/>
-                </View>
+                </View> 
 
+                <View style = {styles.buttonContainer1}>
+              <TouchableOpacity style={styles.button2} onPress={this._signInAsync}>
+                
+                <Text style={styles.input2}> Sign in</Text>
+               
+              </TouchableOpacity>
+
+                </View>
                
                 </View>
             }
@@ -139,30 +150,39 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
-  buttonContainer:{
-     padding: 0, marginBottom: 0,  margin: 0, 
-      borderTopLeftRadius: 90, borderTopRightRadius: 90,
-      borderBottomEndRadius:50,borderBottomRightRadius:100,},
-      input: {
+  
+  buttonContainer1:{
+    backgroundColor:'#f1f2f6',
+    borderTopLeftRadius: 10, borderTopRightRadius: 10,
+    borderBottomLeftRadius:10,borderBottomRightRadius:10,
+    height: 35,
+  width:250},
+
+ input1: {
         margin: 15,
         height: 40,
-            borderColor: '#7a42f4',
-            borderWidth: 2,
+        width:300,
+        borderColor: '#7a4204',
+        borderWidth: 2,
 
 },
 group: {
-  marginTop: 20
+  marginTop: 10
 },
  
 input: {
-  padding: 10,
+  padding: 5,
   flex: 1,
-  height: 40,
-  borderWidth: 1
+  height: 5,
+  borderWidth: 2,
+  borderColor: '#7a4204',
+
 },
 title: {
   fontSize: 20
 },
+input2:{textAlign:'center',  paddingTop:5
+}
 });
 
 export default Swipe2;

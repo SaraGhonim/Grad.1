@@ -88,7 +88,7 @@ class App extends  Component{
         (ispressed2==true&&ispressed1==false)?
         <Second changeState={this.changeState}/>
         :
-        <Second changeState={this.changeState}/>
+        <Third changeState={this.changeState}/>
  
  }
          </View>
