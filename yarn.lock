@@ -6206,6 +6206,11 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
+numeric-keyboard@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/numeric-keyboard/-/numeric-keyboard-0.7.0.tgz#0355d229846798dd8a9cd573c5c0ecc188a64a66"
+  integrity sha512-V4xdt0yu8JT6pbMlnBE3MU9yWui3HitaeSD+32/F8iz5sPdeuyzYgvBFFmrwAh7a4VFVO/OOSuyVMLEuR6nu6Q==
+
 nwsapi@^2.0.7:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.0.tgz#204879a9e3d068ff2a55139c2c772780681a38b7"
@@ -6811,6 +6816,13 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
+
+react-native-sms-verifycode@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-sms-verifycode/-/react-native-sms-verifycode-2.4.0.tgz#74866eac255338516c60a5052810596d7b75a8f4"
+  integrity sha512-hm0+SGVXNWZcgv5cCTGu98wY+iJBPNtbOzqZaQ/Mmb9RGylfT0tT8HLt9tvEeA/u3oeHk/ouDgr0BsUBebMYLw==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native-swipe-up-down-fix@^1.0.8:
   version "1.0.8"
