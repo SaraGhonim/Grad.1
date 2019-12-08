@@ -57,7 +57,7 @@ class Swipe2 extends  Component{
     this.setState({ispressed1:!this.state.ispressed1});
     console.log('ooooooo')
     console.log(this.state.ispressed1)
-    this.props.handleInputs(this.state.ispressed1,this.state.ispressed2);
+    this.props.changeState(this.state.ispressed1,this.state.ispressed2);
 
      }
      _reg(){
@@ -65,7 +65,7 @@ class Swipe2 extends  Component{
         this.setState({ispressed2:!this.state.ispressed2});
         console.log('12222hhh')
         console.log(this.state.ispressed2)
-        this.props.handleInputs(this.state.ispressed1,this.state.ispressed2);
+        this.props.changeState(this.state.ispressed1,this.state.ispressed2);
     
          }
 
@@ -75,46 +75,35 @@ class Swipe2 extends  Component{
   return (
     <>
       
-        <View style={{flex:1,backgroundColor: "#ffd420"}}>
-        <View style={{ alignItems: 'center', height: 200, marginBottom: 100,width:330}}>
+        <View style={{flex:1,backgroundColor: "#ffd420"}}> 
+         <View style={{ alignItems: 'center', height: 200, marginBottom: 100,width:330}}>
 
           <Image source={icon2}
           style={{ width: 200,
             height: 550,
-            resizeMode: 'contain'}} /> 
+            resizeMode: 'contain'}} />  
 
-          </View>
-          
+           </View>
           <SwipeUpDown
             style={{backgroundColor:'#ffffff',flex:1}}
             itemMini={
               <View style={{ alignItems: 'center' }}>
 
           <View style = {styles.buttonContainer}>
-                <TouchableOpacity onPress={this._signInAsync}>
-                 <Image
-                 source={icon3 }  
-                 style={{width: 390,
-                  height: 50,
-                  resizeMode: 'contain'} } />
+                <TouchableOpacity style={styles.button} onPress={this._signInAsync}>
+                
+                  <Text style={styles.input}> Create account</Text>
                  
                 </TouchableOpacity>
 
               </View>
               <View style = {styles.buttonContainer}>
-                <TouchableOpacity onPress={this._reg}>
-                 <Image
-                 source={icon1} 
-                 style={{width: 280,
-                  height: 50,
-                  resizeMode: 'contain'} } />
-                 
-                </TouchableOpacity>
-{/* 
-             <TextInput style = {styles.input}
-               placeholderTextColor = "#9a73ef"
-               placeholder="UserName"
-               name ='UserName'/> */}
+              <TouchableOpacity style={styles.button2} onPress={this._signInAsync}>
+                
+                <Text style={styles.input2}> Sign in</Text>
+               
+              </TouchableOpacity>
+
                 </View>
 
            
@@ -122,7 +111,9 @@ class Swipe2 extends  Component{
             }
                           
            
-            itemFull={<></>}
+            itemFull={<>
+            <Text>hey</Text>
+            </>}
             swipeHeight={160} 
             onShowMini={() => console.log('mini')}
             animation={this.state.animation}
@@ -161,16 +152,35 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   buttonContainer:{
-     padding: 0, marginBottom: 0,  margin: 0, 
-      borderTopLeftRadius: 90, borderTopRightRadius: 90,
-      borderBottomEndRadius:50,borderBottomRightRadius:100,},
-      input: {
-        margin: 15,
+     padding: 10, marginBottom: 0,  margin: 0, },
+  input: {
         height: 40,
-            borderColor: '#7a42f4',
-            borderWidth: 2,
+        borderColor: '#7a42f4',
+        textAlign: 'center',
+        color: 'white',
+        paddingTop:5
+      },input2: {
+        height: 40,
+        borderColor: '#7a42f4',
+        textAlign: 'center',
+        color: 'black',
+        paddingTop:5
 
-}
+      },
+button:{
+  backgroundColor:'#ff8900',
+  borderTopLeftRadius: 10, borderTopRightRadius: 10,
+  borderBottomLeftRadius:10,borderBottomRightRadius:10,
+  height: 35,
+width:250},
+button2:{
+  backgroundColor:'#f1f2f6',
+  borderTopLeftRadius: 10, borderTopRightRadius: 10,
+  borderBottomLeftRadius:10,borderBottomRightRadius:10,
+  height: 35,
+width:250},
+
+
 });
 
 export default Swipe2;

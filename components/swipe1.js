@@ -76,6 +76,7 @@ class Swipe1 extends  Component{
                 
 
                <TextInput style = {styles.input}
+               underlineColorAndroid = "transparent"
                placeholderTextColor = "#9a73ef"
                placeholder="UserName"
                name ='UserName'/>
@@ -83,7 +84,8 @@ class Swipe1 extends  Component{
 
                 <View style = {styles.buttonContainer}>
                 <TextInput style = {styles.input}
-                placeholderTextColor = "#9a73ef"
+               underlineColorAndroid = "transparent"
+               placeholderTextColor = "#9a73ef"
                 placeholder="PassWord"
                 name ='Password'/>
                 </View>
@@ -135,8 +137,7 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
-  buttonContainer:{
-     padding: 0, marginBottom: 0,  margin: 0, 
+  buttonContainer:{ 
       borderTopLeftRadius: 90, borderTopRightRadius: 90,
       borderBottomEndRadius:50,borderBottomRightRadius:100,},
       input: {

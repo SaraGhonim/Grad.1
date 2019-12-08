@@ -80,7 +80,11 @@ class Swipe2 extends  Component{
                placeholder="SignUp"
                name ='SignUp'/>
                 </View>
-
+                <View style={styles.group}>
+                <Text style={styles.title}>Weight (KG)</Text>
+                <TextInput style={styles.input} keyboardType='numeric'
+                 value={this.state.weight} onChangeText={(weight) => this.setState({weight})}/>
+               </View>
                 <View style = {styles.buttonContainer}>
                 <TextInput style = {styles.input}
                 placeholderTextColor = "#9a73ef"
@@ -145,7 +149,20 @@ const styles = StyleSheet.create({
             borderColor: '#7a42f4',
             borderWidth: 2,
 
-}
+},
+group: {
+  marginTop: 20
+},
+ 
+input: {
+  padding: 10,
+  flex: 1,
+  height: 40,
+  borderWidth: 1
+},
+title: {
+  fontSize: 20
+},
 });
 
 export default Swipe2;

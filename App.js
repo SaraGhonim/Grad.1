@@ -53,13 +53,12 @@ class App extends  Component{
       animation: "easeInEaseOut",
 
     }
-    this.handleInputs=this.handleInputs.bind(this);
+    this.changeState=this.changeState.bind(this);
 
   }
-  handleInputs= (ispressed1,ispressed2) =>{
+  changeState= (ispressed1,ispressed2) =>{
     this.setState({ispressed1 });
    this.setState({ ispressed2});
-   //this.setState({ userName:userName});
    setTimeout(()=>{alert("The first is: "+ this.state.ispressed2+
    " and the second is: "+this.state.ispressed1);}
   ,3000);
@@ -73,23 +72,23 @@ class App extends  Component{
     <>
       
          <View style={{flex:1,backgroundColor: "#ffd420"}}>
-        <View style={{ alignItems: 'center', height: 200, marginBottom: 90,width:330}}>
+        {/* <View style={{ alignItems: 'center', height: 200, marginBottom: 0,width:330}}>
 
           <Image source={icon2}
           style={{ width: 200,
             height: 550,
             resizeMode: 'contain'}} /> 
-          </View> 
+          </View>  */}
     
        <View style={{flex:1}}>
           {         
            (ispressed1==true&&ispressed2==false)?
-         <First handleInputs={this.handleInputs}/>
+         <First changeState={this.changeState}/>
         :
         (ispressed2==true&&ispressed1==false)?
-        <Second handleInputs={this.handleInputs}/>
+        <Second changeState={this.changeState}/>
         :
-        <Third handleInputs={this.handleInputs}/>
+        <Second changeState={this.changeState}/>
  
  }
          </View>
