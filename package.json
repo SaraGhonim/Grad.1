@@ -14,7 +14,7 @@
     "numeric-keyboard": "^0.7.0",
     "react": "16.9.0",
     "react-codemod": "^5.1.1",
-    "react-native": "0.61.5",
+    "react-native": "0.62.3",
     "react-native-sms-verifycode": "^2.4.0",
     "react-native-swipe-up-down": "^1.0.7",
     "react-native-swipe-up-down-fix": "^1.0.8"
